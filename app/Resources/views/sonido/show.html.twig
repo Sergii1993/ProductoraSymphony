@@ -1,0 +1,36 @@
+{% extends 'base.html.twig' %}
+
+{% block tabla1 %}
+    <h1>Sonido</h1>
+
+    <table>
+        <tbody>
+            <tr>
+                <th>Descripcion</th>
+                <td>{{ sonido.descripcion }}</td>
+            </tr>
+            <tr>
+                <th>Tipo</th>
+                <td>{{ sonido.tipo }}</td>
+            </tr>
+            <tr>
+                <th>Id</th>
+                <td>{{ sonido.id }}</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <ul>
+        <li>
+            <a href="{{ path('sonido_index') }}">Back to the list</a>
+        </li>
+        <li>
+            <a href="{{ path('sonido_edit', { 'id': sonido.id }) }}">Edit</a>
+        </li>
+        <li>
+            {{ form_start(delete_form) }}
+                <input type="submit" value="Delete">
+            {{ form_end(delete_form) }}
+        </li>
+    </ul>
+{% endblock %}

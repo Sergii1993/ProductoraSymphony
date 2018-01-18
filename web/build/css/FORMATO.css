@@ -1,0 +1,88 @@
+
+body {margin:0;}
+
+
+
+#cabecera{
+	background-color:  #011713;
+	font-size:  250%;
+	font-family: sansserif;
+	font-style: italic;
+	color: #819FF7;
+	float: center;
+}
+
+
+.Lista {
+	 
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;  /* Lo que no cabe no se muestra */
+    background-color: #333;
+}
+
+.Lista > li {
+   
+    float: left;  
+    
+   
+}
+
+.Lista > li > a {
+    display: block;
+    color: #d0ece7;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    border: solid 0.5px grey;
+}
+
+.Lista > li > a:hover {
+    background-color: #111;
+    
+}
+
+.dropdown {
+    float: left;
+    overflow: hidden;
+}
+
+.dropdown .dropa {
+    font-size: 16px;    
+    border: none;
+    outline: none;
+    color: white;
+    padding: 14px 16px;
+    background-color: inherit;
+}
+
+.dropdown:hover .dropa {
+    background-color: #111;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+}
+
+.dropdown-content a {
+    float: none;
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    text-align: left;
+}
+
+.dropdown-content a:hover {
+    background-color: #444;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}

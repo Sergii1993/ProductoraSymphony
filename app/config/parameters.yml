@@ -1,0 +1,12 @@
+# This file is auto-generated during the composer install
+parameters:
+    database_host: 127.0.0.1
+    database_port: null
+    database_name: Productos
+    database_user: sergio
+    database_password: as3-2-17
+    mailer_transport: smtp
+    mailer_host: 127.0.0.1
+    mailer_user: null
+    mailer_password: null
+    secret: f736523dbc167b80e79248c6ea53e9b64fa7ef63

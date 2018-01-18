@@ -1,0 +1,16 @@
+{% extends 'base.html.twig' %}
+
+{% block tabla1 %}
+    <h1>Introducir nuevo sonido</h1>
+
+    {{ form_start(form) }}
+        {{ form_widget(form) }}
+        <input type="submit" value="Crear Sonido" />
+    {{ form_end(form) }}
+
+    <ul>
+        <li>
+            <a href="{{ path('sonido_index') }}">Ir a la base de datos</a>
+        </li>
+    </ul>
+{% endblock %}

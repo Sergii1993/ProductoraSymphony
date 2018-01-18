@@ -1,0 +1,16 @@
+{% extends 'base.html.twig' %}
+
+{% block tabla %}
+    <h1>Introducir nueva iluminaria</h1>
+
+    {{ form_start(form) }}
+        {{ form_widget(form) }}
+        <input type="submit" value="Crear Registro" />
+    {{ form_end(form) }}
+
+    <ul>
+        <li>
+            <a href="{{ path('iluminacion_index') }}">Ir a la base de datos</a>
+        </li>
+    </ul>
+{% endblock %}

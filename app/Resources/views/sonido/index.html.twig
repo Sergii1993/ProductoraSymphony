@@ -1,0 +1,41 @@
+{% extends 'base.html.twig' %}
+
+{% block tabla1 %}
+    <h1>Sonidos list</h1>
+
+    <table border="solid black 2px">
+        <thead>
+            <tr>
+                <th>Descripcion</th>
+                <th>Tipo</th>
+                <th>Id</th>
+                <th>Actions</th>
+            </tr>
+        </thead>
+        <tbody>
+        {% for sonido in sonidos %}
+            <tr>
+                <td><a href="{{ path('sonido_show', { 'id': sonido.id }) }}">{{ sonido.descripcion }}</a></td>
+                <td>{{ sonido.tipo }}</td>
+                <td>{{ sonido.id }}</td>
+                <td>
+                    <ul>
+                        <li>
+                            <a href="{{ path('sonido_show', { 'id': sonido.id }) }}">ver</a>
+                        </li>
+                        <li>
+                            <a href="{{ path('sonido_edit', { 'id': sonido.id }) }}">editar</a>
+                        </li>
+                    </ul>
+                </td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+
+    <ul>
+        <li>
+            <a href="{{ path('sonido_new') }}">Crear nuevo registro</a>
+        </li>
+    </ul>
+{% endblock %}

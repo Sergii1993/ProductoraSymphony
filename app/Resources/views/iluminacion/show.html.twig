@@ -1,0 +1,36 @@
+{% extends 'base.html.twig' %}
+
+{% block tabla %}
+    <h1>Iluminacion</h1>
+
+    <table>
+        <tbody>
+            <tr>
+                <th>Descripcion</th>
+                <td>{{ iluminacion.descripcion }}</td>
+            </tr>
+            <tr>
+                <th>Tipo</th>
+                <td>{{ iluminacion.tipo }}</td>
+            </tr>
+            <tr>
+                <th>Id</th>
+                <td>{{ iluminacion.id }}</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <ul>
+        <li>
+            <a href="{{ path('iluminacion_index') }}">Back to the list</a>
+        </li>
+        <li>
+            <a href="{{ path('iluminacion_edit', { 'id': iluminacion.id }) }}">Edit</a>
+        </li>
+        <li>
+            {{ form_start(delete_form) }}
+                <input type="submit" value="Delete">
+            {{ form_end(delete_form) }}
+        </li>
+    </ul>
+{% endblock %}

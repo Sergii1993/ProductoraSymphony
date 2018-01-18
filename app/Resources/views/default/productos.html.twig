@@ -1,0 +1,12 @@
+{% extends 'base.html.twig' %}
+
+{% block contenido %}
+    <h1>FILTRO</h1><br>
+   
+ <form action="<?php $_SERVER['PHP_SELF'] ?>"  method="post">
+       Introduce el tipo de equipo que desees buscar:  <input type="text" name="Tipo"/><br/>
+       
+        <input type="submit" name="env" value="Introducir"/>
+    </form>	  
+{%endblock%}
+

@@ -1,0 +1,21 @@
+{% extends 'base.html.twig' %}
+
+{% block tabla %}
+    <h1>Iluminacion edit</h1>
+
+    {{ form_start(edit_form) }}
+        {{ form_widget(edit_form) }}
+        <input type="submit" value="editar" />
+    {{ form_end(edit_form) }}
+
+    <ul>
+        <li>
+            <a href="{{ path('iluminacion_index') }}">Volver a la base de datos</a>
+        </li>
+        <li>
+            {{ form_start(delete_form) }}
+                <input type="submit" value="Borrar">
+            {{ form_end(delete_form) }}
+        </li>
+    </ul>
+{% endblock %}

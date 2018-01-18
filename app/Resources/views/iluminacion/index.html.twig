@@ -1,0 +1,41 @@
+{% extends 'base.html.twig' %}
+
+{% block tabla %}
+    <h1>Iluminacions list</h1>
+
+    <table border="solid black 2px">
+        <thead>
+            <tr>
+                <th>Descripcion</th>
+                <th>Tipo</th>
+                <th>Id</th>
+                <th>Actions</th>
+            </tr>
+        </thead>
+        <tbody>
+        {% for iluminacion in iluminacions %}
+            <tr>
+                <td><a href="{{ path('iluminacion_show', { 'id': iluminacion.id }) }}">{{ iluminacion.descripcion }}</a></td>
+                <td>{{ iluminacion.tipo }}</td>
+                <td>{{ iluminacion.id }}</td>
+                <td>
+                    <ul>
+                        <li>
+                            <a href="{{ path('iluminacion_show', { 'id': iluminacion.id }) }}">ver</a>
+                        </li>
+                        <li>
+                            <a href="{{ path('iluminacion_edit', { 'id': iluminacion.id }) }}">editar</a>
+                        </li>
+                    </ul>
+                </td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+
+    <ul>
+        <li>
+            <a href="{{ path('iluminacion_new') }}">Crear nuevo registro</a>
+        </li>
+    </ul>
+{% endblock %}
